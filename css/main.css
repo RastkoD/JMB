@@ -1,0 +1,279 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/*Font import*/
+/* @import url(""); */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+@font-face {
+  font-family: ground;
+  src: url(/Fonts/Black\ Ground.woff);
+}
+
+@font-face {
+  font-family: basquiat;
+  src: url(/Fonts/BASQUIAT.otf);
+}
+
+:root {
+  /*colours*/
+  --primary: hsl(0, 0%, 0%);
+  --secondary: hsl(0, 0%, 100%); /* 30% */
+  --accent: hsl(0, 99%, 51%); /* 10% */
+
+  /*fonts*/
+  font-size: 62.5%; /* 10px on default browser settings */
+  /*font-size: 100%; /* 16px */
+  --font-color: var(--secondary);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--primary);
+  font-family: "Roboto Condensed", sans-serif;
+  color: var(--font-color);
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 4.6rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+h4 {
+  font-size: 2.2rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+}
+
+h6 {
+  font-size: 1.6rem;
+}
+
+p {
+  max-width: 40em;
+  margin: 0;
+}
+
+.btn {
+  cursor: pointer;
+  color: var(--primary);
+  background: var(--accent);
+  border: var(--border);
+  border-radius: var(--borderRadius);
+  font-family: var(--headingFont);
+  letter-spacing: var(--letterSpacing);
+  padding: 1rem;
+  transition: var(--transition);
+  text-transform: capitalize;
+  display: inline-block;
+  /* Prevent selecting the text */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none;
+}
+
+.btn:hover {
+  background: var(--primary);
+  color: var(--accent);
+}
+
+aside {
+  position: fixed;
+  right: 0;
+  border-left: 1px solid var(--secondary);
+  width: 4rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+aside p {
+  writing-mode: sideways-rl;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-decoration: line-through;
+}
+
+aside p:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#container {
+  height: 100%;
+  width: calc(100% - 4rem);
+}
+
+#landing {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.landingGifs {
+  width: 100%;
+  height: 60%;
+  border-bottom-left-radius: 280px;
+  border-bottom-right-radius: 280px;
+  background-image: url(/Images/landingPlaceholder.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: landingGif 8s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes landingGif {
+  0% {
+    background-image: url(/Images/landingGif.gif);
+  }
+  50% {
+    background-image: url(/Images/landingGif1.gif);
+  }
+  100% {
+    background-image: url(/Images/landingGif2.gif);
+    background-position: top;
+  }
+}
+
+.landingLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/Images/layerOne.gif);
+  background-size: 105%;
+  pointer-events: none;
+}
+
+.landingText {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.landingText div {
+  padding-left: 5px;
+}
+
+.landingText div h2 {
+  font-size: clamp(5rem, 8.4vw, 14rem);
+  line-height: 0.1;
+}
+
+.landingText div:nth-of-type(1) {
+}
+
+.landingText div:nth-of-type(2) {
+}
+
+.landingText div:nth-of-type(3) {
+}
+.landingText div:nth-of-type(4) {
+}
+.landingText div:nth-of-type(5) {
+  text-align: right;
+  padding-right: 5px;
+}
+.landingText div:nth-of-type(6) {
+}
+.landingText div:nth-of-type(7) {
+}
+
+.landingText div:nth-of-type(2) h2,
+.landingText div:nth-of-type(3) h2,
+.landingText div:nth-of-type(7) h2 {
+  font-family: ground;
+  font-weight: 800;
+}
+
+.landingText div:nth-of-type(1) h2,
+.landingText div:nth-of-type(4) h2,
+.landingText div:nth-of-type(5) h2 {
+  letter-spacing: -4px;
+}
+
+.landingText div:nth-of-type(3) h2,
+.landingText div:nth-of-type(5) h2,
+.landingText div:nth-of-type(6) h2,
+.landingText div:nth-of-type(7) h2 {
+}
+
+#earlyLife {
+}
+
+/* Device Breakpoints */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
+}
