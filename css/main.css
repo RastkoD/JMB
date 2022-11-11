@@ -198,7 +198,7 @@ aside p:hover {
 }
 
 .landingText div h2 {
-  font-size: clamp(5rem, 8.4vw, 14rem);
+  font-size: clamp(4rem, 9vw, 14rem);
   line-height: 0.1;
 }
 
@@ -209,21 +209,21 @@ aside p:hover {
 }
 
 .landingText div:nth-of-type(3) {
+  width: 55%;
 }
+
 .landingText div:nth-of-type(4) {
-}
-.landingText div:nth-of-type(5) {
+  width: 45%;
   text-align: right;
   padding-right: 5px;
 }
+
 .landingText div:nth-of-type(6) {
-}
-.landingText div:nth-of-type(7) {
 }
 
 .landingText div:nth-of-type(2) h2,
 .landingText div:nth-of-type(3) h2,
-.landingText div:nth-of-type(7) h2 {
+.landingText div:nth-of-type(6) h2 {
   font-family: ground;
   font-weight: 800;
 }
@@ -240,6 +240,13 @@ aside p:hover {
 /* Device Breakpoints */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .landingText div:nth-of-type(3) {
+    width: 100%;
+  }
+
+  .landingText div:nth-of-type(4) {
+    width: 100%;
+  }
 }
 
 /* Small devices (portrait tablets and large phones 600px and up) */
