@@ -137,6 +137,7 @@ aside p:hover {
 #container {
   height: 100%;
   width: calc(100% - 4rem);
+  overflow: hidden;
 }
 
 #landing {
@@ -145,7 +146,6 @@ aside p:hover {
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden;
 }
 
 .landingGifs {
@@ -202,12 +202,6 @@ aside p:hover {
   line-height: 0.1;
 }
 
-.landingText div:nth-of-type(1) {
-}
-
-.landingText div:nth-of-type(2) {
-}
-
 .landingText div:nth-of-type(3) {
   width: 55%;
 }
@@ -218,14 +212,12 @@ aside p:hover {
   padding-right: 5px;
 }
 
-.landingText div:nth-of-type(6) {
-}
-
 .landingText div:nth-of-type(2) h2,
 .landingText div:nth-of-type(3) h2,
 .landingText div:nth-of-type(6) h2 {
-  font-family: ground;
+  font-family: basquiat;
   font-weight: 800;
+  font-size: clamp(4rem, 14vw, 20rem);
 }
 
 .landingText div:nth-of-type(1) h2,
@@ -235,6 +227,150 @@ aside p:hover {
 }
 
 #earlyLife {
+  width: 100%;
+  height: 130vh;
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.lifeLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/Images/layerOne.gif);
+  background-size: 160%;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.lifeLayerTwo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/Images/layerTwoGifSmall.gif);
+  background-size: 134%;
+  pointer-events: none;
+  z-index: 5;
+  mix-blend-mode: difference;
+}
+
+.lifeCrown {
+  position: absolute;
+  top: -10rem;
+  left: 25rem;
+  width: 32rem;
+  height: 40rem;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.lifeCrownImg {
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.crownImage {
+  height: 35rem;
+  animation: slideTube 0.8s steps(6) infinite;
+}
+
+@keyframes slideTube {
+  from {
+    transform: translate3d(0px, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.lifeBigImg {
+  top: 10rem;
+  left: 10rem;
+  width: 50rem;
+  height: 70rem;
+  background-image: url(/Images/lifeImg.jpeg);
+  background-size: cover;
+  z-index: 1;
+  transform: scaleX(-1);
+}
+
+.lifeBigImg,
+.lifeSmallImg,
+.lifeSmallImgTwo,
+.lifePainting {
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.lifeSmallImg {
+  top: 24rem;
+  right: 0rem;
+  width: 20rem;
+  height: 35rem;
+  background-image: url(/Images/youngJMB.jpeg);
+  background-size: 120%;
+  background-position: -260% center;
+}
+
+.lifeSmallImgTwo {
+  top: 64rem;
+  left: 15rem;
+  width: 20rem;
+  height: 30rem;
+  background-image: url(/Images/youngJMB.jpeg);
+  background-size: 170%;
+  background-position: 100% top;
+  z-index: 2;
+}
+
+.lifePainting {
+  top: 54rem;
+  right: 5rem;
+  width: 35rem;
+  height: 52rem;
+  background-image: url(/Images/lifeJMB.jpg);
+  background-size: cover;
+}
+
+.lifeTxt {
+  width: 45%;
+  height: 60%;
+  z-index: 5;
+  margin-right: 8vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+}
+
+.lifeTxt p {
+  font-size: 2rem;
+}
+
+.lifeTxt p:nth-of-type(2) {
+  max-width: 35ch;
+}
+
+.lifeJmbTxt {
+  position: absolute;
+  bottom: 2rem;
+  left: 10%;
+}
+
+.lifeJmbTxt p {
+  font-family: basquiat;
+  font-size: 10rem;
+  line-height: 0.6;
+  color: hsla(0, 0%, 100%, 0.384);
 }
 
 /* Device Breakpoints */
