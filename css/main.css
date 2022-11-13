@@ -9,11 +9,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
 
 @font-face {
-  font-family: ground;
-  src: url(/Fonts/Black\ Ground.woff);
-}
-
-@font-face {
   font-family: basquiat;
   src: url(/Fonts/BASQUIAT.otf);
 }
@@ -85,6 +80,7 @@ h6 {
 p {
   max-width: 40em;
   margin: 0;
+  text-transform: uppercase;
 }
 
 .btn {
@@ -125,7 +121,6 @@ aside {
 aside p {
   writing-mode: sideways-rl;
   font-size: 2.5rem;
-  text-transform: uppercase;
   text-decoration: line-through;
 }
 
@@ -350,12 +345,12 @@ aside p:hover {
   flex-direction: column;
   justify-content: space-around;
   position: relative;
+  pointer-events: none;
 }
 
 .lifeTxt p {
   font-size: 2rem;
   /*font-size: clamp(3.5rem, 5vw, 8rem);*/
-  text-transform: uppercase;
 }
 
 .lifeTxt p:nth-of-type(2) {
@@ -409,11 +404,10 @@ aside p:hover {
 }
 
 .streetIntro {
-  width: 45%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding-left: 1rem;
+  margin-top: 10rem;
 }
 
 .streetIntroCrown {
@@ -428,7 +422,6 @@ aside p:hover {
 }
 
 .streetIntro p {
-  text-transform: uppercase;
   /*font-size: clamp(3.5rem, 5vw, 8rem);*/
 }
 
@@ -460,10 +453,16 @@ aside p:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: center;
 }
 
 #fame .streetLayerTwo {
   background-image: url(/Images/layerTwoGifSmall.gif);
+  transform: rotate(180deg);
+}
+
+#fame .streetIntro {
+  margin-top: 0;
 }
 
 #fame .streetIntro p {
@@ -473,6 +472,149 @@ aside p:hover {
 #fame .streetIntroCrown {
   margin-left: 0.8rem;
 }
+
+#rise {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 5rem 0rem 5rem 2rem;
+}
+
+.risePainting {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.risePainting img {
+  width: 90%;
+  object-fit: cover;
+}
+
+.lifePainting:hover,
+.riseTxtImg img:hover,
+.risePainting img:hover {
+  z-index: 99;
+  transform: scale(1.1);
+}
+
+.riseGifTxt {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.riseGif {
+  width: 70%;
+  height: 60%;
+  background-image: url(/Images/JMBGIF.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transform: rotate(17deg);
+  filter: contrast(200%) brightness(60%);
+}
+
+.riseGif div {
+  width: 100%;
+  height: 100%;
+  animation: riseRedOverlay 2s infinite;
+}
+
+.riseGif div:hover {
+  background: none;
+  animation: none;
+}
+
+@keyframes riseRedOverlay {
+  0% {
+    background: rgba(179, 0, 0, 0.575);
+  }
+  49% {
+    background: rgba(179, 0, 0, 0.575);
+  }
+  50% {
+    background: none;
+  }
+  51% {
+    background: rgba(179, 0, 0, 0.575);
+  }
+
+  56% {
+    background: none;
+  }
+  57% {
+    background: rgba(179, 0, 0, 0.575);
+  }
+  77% {
+    background: none;
+  }
+  78% {
+    background: rgba(179, 0, 0, 0.575);
+  }
+  100% {
+    background: rgba(179, 0, 0, 0.575);
+  }
+}
+
+.riseTxtImg {
+  width: 30%;
+  height: 120%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.riseTxtImg img {
+  width: 60%;
+  object-fit: cover;
+}
+
+.riseImg {
+  width: 100%;
+  height: 25%;
+  background-image: url(/Images/riseJMB.jpg);
+  background-position: center;
+  background-size: 100%;
+}
+
+.travelCrowns {
+  width: 100%;
+  height: 8vw;
+  margin-bottom: 4rem;
+}
+
+.travelingCrowns {
+  width: 100%;
+  height: 100%;
+  background-image: url(/Images/whiteCrownStrip.png);
+  background-size: contain;
+  background-position: center;
+  object-fit: cover;
+}
+
+.riseVideo {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.riseVideo iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* Device Breakpoints */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
