@@ -118,6 +118,11 @@ aside {
   justify-content: space-around;
 }
 
+aside a {
+  text-decoration: none;
+  color: var(--secondary);
+}
+
 aside p {
   writing-mode: vertical-rl;
   -ms-writing-mode: vertical-rl;
