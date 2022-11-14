@@ -992,7 +992,7 @@ footer .links div:nth-of-type(2) {
 }
 
 footer .links div:nth-of-type(3) {
-  top: 28rem;
+  top: 25rem;
   right: 24rem;
 }
 
@@ -1026,7 +1026,6 @@ footer a {
 }
 
 /* Device Breakpoints */
-/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .landingText div:nth-of-type(3) {
     width: 100%;
@@ -1037,20 +1036,239 @@ footer a {
   }
 }
 
-/* Small devices (portrait tablets and large phones 600px and up) */
-@media only screen and (min-width: 600px) {
-}
+@media only screen and (max-width: 768px) {
+  .lifeTxt {
+    top: 12rem;
+    width: 65% !important;
+    height: 50% !important;
+    z-index: 66;
+    justify-content: flex-start;
+  }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+  #fame {
+    height: 60vh;
+  }
+
+  #final {
+    height: 150vh !important;
+  }
+
+  #death {
+    height: 60vh;
+  }
+
+  footer .links div:nth-of-type(6) {
+    bottom: 10rem;
+    left: 73%;
+  }
+
+  footer .links div:nth-of-type(5) {
+    bottom: 22rem;
+    right: 70%;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 992px) {
+  .lifePainting {
+    opacity: 1 !important;
+    z-index: 66;
+    right: 2rem;
+  }
+
+  .lifeTxt {
+    position: absolute;
+    left: 1rem;
+    width: 45%;
+    height: 60%;
+  }
+
+  .lifeSmallImgTwo {
+    display: none;
+  }
+
+  .lifeJmbTxt {
+    left: 2rem !important;
+  }
+
+  #final {
+    height: 120vh;
+    padding: 10vh 0;
+  }
+
+  .finalTxtImg {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem;
+  }
+
+  .finalTxtImgCont {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  footer .links div:nth-of-type(1) {
+    bottom: 38rem;
+  }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1200px) {
+  .lifeBigImg {
+    opacity: 0.8;
+    pointer-events: none;
+  }
+
+  .lifePainting {
+    opacity: 0.8;
+  }
+
+  .lifePainting:hover {
+    opacity: 1;
+  }
+
+  .lifeJmbTxt {
+    bottom: -25rem;
+    left: -30vw;
+  }
+
+  .lifeJmbTxt p {
+    /*font-size: clamp(3.5rem, 5vw, 8rem);*/
+    color: hsl(0, 0%, 100%);
+  }
+}
+
+@media only screen and (max-width: 428px) {
+  #landing {
+    height: 90vh;
+  }
+
+  #earlyLife {
+    height: 180vh;
+  }
+
+  .lifeCrown {
+    top: -8rem;
+    left: 4rem;
+    width: 22rem;
+    height: 30rem;
+  }
+
+  .crownImage {
+    height: 25rem;
+  }
+
+  .lifeBigImg {
+    top: 6rem;
+    left: -10rem;
+    width: 38.5rem;
+    height: 50rem;
+  }
+
+  .lifeSmallImg {
+    z-index: 33;
+  }
+
+  .lifePainting {
+    top: 65%;
+    right: 10% !important;
+    width: 30rem;
+    height: 52rem;
+  }
+
+  .lifeTxt {
+    top: 40% !important;
+    width: 100% !important;
+    height: max-content !important;
+    z-index: 66;
+    justify-content: flex-start;
+  }
+
+  .lifeJmbTxt {
+    bottom: 40rem;
+    left: -30vw;
+  }
+
+  .lifeJmbTxt p {
+    color: hsla(0, 0%, 100%, 0.425);
+    line-height: 0.5;
+  }
+
+  .riseTxtImg img {
+    width: 80%;
+    z-index: 66;
+  }
+
+  .risePainting img {
+    width: 100%;
+    z-index: 66;
+  }
+
+  #years {
+    height: 110vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .yearsGif {
+    width: 100%;
+    height: 40%;
+  }
+
+  .yearsImg {
+    width: 100%;
+    height: 50%;
+  }
+
+  .yearsMidTxt {
+    top: 44%;
+    left: 45%;
+  }
+
+  #death {
+    height: 40vh !important;
+  }
+
+  #obituary {
+    padding: 4rem 0 3rem 1rem;
+    display: grid;
+    grid-template:
+      "oneH"
+      "one"
+      "two"
+      "threeH"
+      "three"
+      "four" /
+      100%;
+    gap: 1rem;
+    position: relative;
+  }
+
+  .obThreeH {
+    margin-top: 1.5rem;
+  }
+
+  footer .links div:nth-of-type(3) {
+    right: 45%;
+  }
+
+  footer .links div:nth-of-type(2) {
+    bottom: 26rem;
+    left: 70%;
+  }
+
+  footer .links div:nth-of-type(4) {
+    bottom: 15rem;
+    right: 45%;
+  }
+
+  footer .links div:nth-of-type(1) {
+    bottom: 38rem;
+    left: 80%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
