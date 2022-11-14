@@ -1065,4 +1065,65 @@ footer a {
     transition-delay: 0s !important;
     transition-duration: 0s !important;
   }
+
+  .landingGifs {
+    animation: none;
+  }
+
+  .landingLayer {
+    background-image: none;
+  }
+
+  .lifeLayer {
+    background-image: none;
+  }
+
+  .lifeLayerTwo {
+    background-image: none;
+  }
+
+  .crownImage {
+    animation: none;
+  }
+
+  .streetLayerOne {
+    background-image: none;
+  }
+
+  .streetLayerTwo {
+    background-image: none;
+  }
+
+  .streetGif {
+    background-image: url(/Images/reducedMotionGif.png);
+  }
+
+  #fame .streetLayerTwo {
+    background-image: none;
+  }
+
+  .riseGif {
+    background-image: url(/Images/JMBGIFReduced.png);
+  }
+
+  .riseGif div {
+    animation: none;
+  }
+
+  .galleryBtn {
+    background-image: none;
+  }
+
+  .galleryBtn a {
+    color: rgb(255, 255, 255);
+  }
+
+  .yearsGif {
+    background-image: url(/Images/warholImg.png);
+    background-size: 50%;
+  }
+
+  .yearsGif img {
+    display: none;
+  }
 }
