@@ -263,6 +263,18 @@ aside p:hover {
   mix-blend-mode: difference;
 }
 
+.carHitGif {
+  position: absolute;
+  bottom: -2rem;
+  left: 30%;
+  width: 280px;
+  height: 190px;
+  background-image: url(/Images/carGif.gif);
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: invert(1);
+}
+
 .lifeCrown {
   position: absolute;
   top: -10rem;
@@ -357,7 +369,7 @@ aside p:hover {
 }
 
 .lifeTxt p {
-  font-size: clamp(1.2rem, 1.6vw, 2rem);
+  font-size: clamp(1.4rem, 1.6vw, 2rem);
 }
 
 .lifeTxt p:nth-of-type(2) {
@@ -845,8 +857,35 @@ aside p:hover {
   position: relative;
 }
 
+.obGIF {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 140px;
+  height: 300px;
+  background-image: url(/Images/obGIF.gif);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  animation: obGIF 22s linear infinite;
+  opacity: 0;
+}
+
+@keyframes obGIF {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 #obituary p {
   max-width: max-content;
+  mix-blend-mode: difference;
 }
 
 .obOne {
@@ -1301,6 +1340,21 @@ footer a {
     line-height: 0.5;
   }
 
+  .carHitGif {
+    bottom: 55rem;
+    left: 24%;
+    width: 200px;
+    height: 170px;
+  }
+
+  #street {
+    height: 94vh;
+  }
+
+  #fame {
+    height: 72vh;
+  }
+
   .riseTxtImg img {
     width: 80%;
     z-index: 66;
@@ -1309,6 +1363,10 @@ footer a {
   .risePainting img {
     width: 100%;
     z-index: 66;
+  }
+
+  .finalTxtImg h4 {
+    padding-top: 2rem;
   }
 
   #years {
@@ -1434,6 +1492,10 @@ footer a {
   }
 
   .lifeLayerTwo {
+    background-image: none;
+  }
+
+  .carHitGif {
     background-image: none;
   }
 
