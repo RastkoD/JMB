@@ -31,6 +31,8 @@ body {
   padding: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 body {
@@ -355,8 +357,7 @@ aside p:hover {
 }
 
 .lifeTxt p {
-  font-size: 2rem;
-  /*font-size: clamp(3.5rem, 5vw, 8rem);*/
+  font-size: clamp(1.2rem, 1.6vw, 2rem);
 }
 
 .lifeTxt p:nth-of-type(2) {
@@ -372,7 +373,6 @@ aside p:hover {
 .lifeJmbTxt p {
   font-family: basquiat;
   font-size: 10rem;
-  /*font-size: clamp(3.5rem, 5vw, 8rem);*/
   line-height: 0.6;
   color: hsla(0, 0%, 100%, 0.384);
 }
@@ -428,14 +428,11 @@ aside p:hover {
 }
 
 .streetIntro p {
-  /*font-size: clamp(3.5rem, 5vw, 8rem);*/
-}
-
-.streetMain {
+  font-size: clamp(1.2rem, 1vw, 1.8rem);
 }
 
 .streetMain h3 {
-  font-size: clamp(3.5rem, 5vw, 8rem);
+  font-size: clamp(2.9rem, 5vw, 6.3rem);
   line-height: 1;
 }
 
@@ -634,7 +631,7 @@ aside p:hover {
 }
 
 #final h4 {
-  /*font-size: clamp( , ,);*/
+  font-size: clamp(1.4rem, 2vw, 2.3rem);
 }
 
 .finalTxtImg {
@@ -655,8 +652,7 @@ aside p:hover {
   text-align: center;
   padding-top: 14rem;
   font-family: basquiat;
-  font-size: 3.5rem;
-  /*font-size: clamp( , ,);*/
+  font-size: clamp(2.2rem, 2.5vw, 3rem) !important;
 }
 
 .finalTxtImg h4:nth-of-type(1) {
@@ -676,7 +672,7 @@ aside p:hover {
 }
 
 .finalImg img {
-  width: 90%;
+  width: 80%;
   z-index: 4;
 }
 
@@ -718,7 +714,60 @@ aside p:hover {
 #days {
   width: 100%;
   height: 50vh;
+  padding: 8rem 0;
   position: relative;
+  display: grid;
+  grid-template:
+    ". . . ."
+    ". . . ."
+    ". gridCrown gridCrown ."
+    ". . . .";
+}
+
+#days .streetLayerOne {
+  height: 50vh;
+}
+
+#days .lifeLayerTwo {
+  height: 50vh;
+}
+
+#days div {
+  height: fit-content;
+}
+
+.gridCrown {
+  grid-area: gridCrown;
+  display: flex;
+  justify-content: end;
+  padding: 1rem;
+  font-size: 1.4rem;
+  text-align: right;
+}
+
+.gridCrown .streetIntroCrown {
+  margin: 0 0.8rem;
+}
+
+#days h3 {
+  font-size: 5rem;
+  font-size: clamp(1.6rem, 3.6vw, 5.2rem);
+}
+
+#days .jmbFont {
+  font-family: basquiat;
+  font-size: 8rem;
+  font-size: clamp(2.4rem, 5.5vw, 8rem);
+  line-height: 0.6;
+  text-align: right;
+}
+
+#days .daysAlign {
+  text-align: right;
+}
+
+#days .daysBAlign h3 {
+  text-align: left;
 }
 
 #death {
@@ -731,6 +780,57 @@ aside p:hover {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  position: absolute;
+}
+
+#death img:nth-of-type(1):hover {
+  z-index: 55;
+}
+
+#death img:nth-of-type(2) {
+  animation: deathIMG 3s infinite step-end alternate-reverse;
+  z-index: 3;
+  pointer-events: none;
+}
+
+@keyframes deathIMG {
+  0% {
+    opacity: 0;
+  }
+  18% {
+    opacity: 0.5;
+  }
+  19% {
+    opacity: 0;
+  }
+
+  47% {
+    opacity: 0.8;
+  }
+  49% {
+    opacity: 0;
+  }
+  71% {
+    opacity: 1;
+  }
+  72% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  76% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
 }
 
 #obituary {
@@ -1050,7 +1150,7 @@ footer a {
   }
 
   #final {
-    height: 150vh !important;
+    height: 140vh !important;
   }
 
   #death {
@@ -1135,8 +1235,13 @@ footer a {
   }
 
   .lifeJmbTxt p {
-    /*font-size: clamp(3.5rem, 5vw, 8rem);*/
     color: hsl(0, 0%, 100%);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .finalImg {
+    width: 700px;
   }
 }
 
@@ -1226,6 +1331,38 @@ footer a {
   .yearsMidTxt {
     top: 44%;
     left: 45%;
+  }
+
+  #days {
+    height: 50vh;
+    padding: 4rem 0 2rem 0;
+    grid-template:
+      ". . ."
+      ". . ."
+      ". . ."
+      ". . ."
+      ". . ."
+      ". . ."
+      "gridCrown gridCrown gridCrown";
+  }
+
+  .gridCrown {
+    align-items: center;
+  }
+
+  #days div:nth-of-type(9) h3 {
+    text-align: right;
+    font-family: basquiat;
+    font-size: clamp(2.4rem, 5.5vw, 8rem);
+    line-height: 0.6;
+  }
+
+  #days div:nth-of-type(14) h3 {
+    text-align: right;
+  }
+
+  #days div:nth-of-type(15) h3 {
+    text-align: left;
   }
 
   #death {
