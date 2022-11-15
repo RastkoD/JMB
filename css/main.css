@@ -632,7 +632,7 @@ aside p:hover {
 
 #final {
   width: 100%;
-  height: 100vh;
+  height: max-content;
   padding: 10vh 0;
   position: relative;
 }
@@ -700,10 +700,8 @@ aside p:hover {
   height: 100%;
   display: grid;
   place-content: center;
-}
-
-.yearsGif img {
-  width: 400px;
+  background-image: url(/Images/warholImg.png);
+  background-size: 50%;
 }
 
 .yearsImg {
@@ -799,13 +797,13 @@ aside p:hover {
   z-index: 55;
 }
 
-#death img:nth-of-type(2) {
+#death img:nth-of-type(3) {
   animation: deathIMG 3s infinite step-end alternate-reverse;
   z-index: 3;
   pointer-events: none;
 }
 
-#death img:nth-of-type(3) {
+#death img:nth-of-type(2) {
   animation: deathIMG 3s infinite step-end alternate;
   z-index: 3;
   pointer-events: none;
@@ -1234,11 +1232,6 @@ footer a {
 
   .lifeJmbTxt {
     left: 2rem !important;
-  }
-
-  #final {
-    height: 120vh;
-    padding: 10vh 0;
   }
 
   .finalTxtImg {
