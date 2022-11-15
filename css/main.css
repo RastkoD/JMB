@@ -275,6 +275,10 @@ aside p:hover {
   filter: invert(1);
 }
 
+.carHitGif:hover {
+  filter: invert(0);
+}
+
 .lifeCrown {
   position: absolute;
   top: -10rem;
@@ -713,12 +717,66 @@ aside p:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0.8;
 }
 
-.yearsMidTxt {
+.yearsMidTxt h4 {
   position: absolute;
   top: 48%;
-  left: 48%;
+  left: 43%;
+  font-family: basquiat;
+  font-size: 6rem;
+  animation: cabezas 3s steps(1) infinite;
+  opacity: 0;
+  background-image: url(/Images/cabezasBg.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+}
+
+.yearsMidTxt h4:nth-of-type(1) {
+  font-size: 6.9rem;
+  width: 270px;
+  text-align: center;
+}
+
+.yearsMidTxt h4:nth-of-type(2) {
+  animation-delay: 1s;
+  width: 200px;
+  text-align: center;
+}
+
+.yearsMidTxt h4:nth-of-type(3) {
+  animation-delay: 2s;
+  width: 300px;
+  text-align: center;
+  font-size: 6.5rem;
+}
+
+.yearsMidTxt h4:nth-of-type(4) {
+  animation-delay: 2s;
+  font-size: 8rem;
+  top: 42%;
+  left: 41%;
+  width: 320px;
+  text-align: center;
+  filter: invert(1);
+}
+
+@keyframes cabezas {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+  67% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 #days {
@@ -1378,6 +1436,16 @@ footer a {
   .yearsGif {
     width: 100%;
     height: 40%;
+  }
+
+  .yearsMidTxt h4 {
+    top: 43%;
+    left: 10%;
+  }
+
+  .yearsMidTxt h4:nth-of-type(4) {
+    top: 38%;
+    left: 2%;
   }
 
   .yearsImg {
