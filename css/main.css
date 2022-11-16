@@ -137,6 +137,10 @@ aside p:hover {
   cursor: pointer;
 }
 
+nav {
+  display: none;
+}
+
 .fullScreen {
   position: fixed;
   top: 3rem;
@@ -1410,6 +1414,10 @@ footer a {
 @media only screen and (max-width: 768px) {
   aside {
     display: none;
+  }
+
+  nav {
+    display: initial;
   }
 
   #container {
