@@ -137,6 +137,176 @@ aside p:hover {
   cursor: pointer;
 }
 
+.fullScreen {
+  position: fixed;
+  top: 3rem;
+  right: 9rem;
+  z-index: 99;
+}
+
+.menu-wrap .toggler {
+  position: absolute;
+  z-index: 99;
+  cursor: pointer;
+  width: 6rem;
+  height: 3rem;
+  opacity: 0;
+}
+
+.menu-wrap .fullScreenHam {
+  position: absolute;
+  width: 6rem;
+  height: 3rem;
+  padding: 0.4rem;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.menu-wrap .fullScreenHam > div {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.menu-wrap .fullScreenHam > div::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  width: 100%;
+  height: 2px;
+  background-color: inherit;
+}
+
+.menu-wrap .toggler:checked + .fullScreenHam > div {
+  transform: rotate(135deg);
+}
+
+.menu-wrap .toggler:checked + .fullScreenHam > div::before,
+.menu-wrap .toggler:checked + .fullScreenHam > div::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.menu-wrap .toggler:checked:hover + .fullScreenHam > div {
+  transform: rotate(225deg);
+}
+
+.menu-wrap .toggler:checked ~ .fullScreenMenu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .fullScreenMenu > div {
+  transform: scale(1);
+  transition-duration: 0.3s;
+}
+
+.menu-wrap .toggler:checked ~ .fullScreenMenu > div > div {
+  opacity: 1;
+  transition: var(--transition);
+}
+
+.fullScreenMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullScreenMenu li {
+  display: grid;
+  place-items: center;
+}
+
+.menu-wrap .fullScreenMenu > div {
+  background-color: var(--primary);
+  width: 200vw;
+  height: 200vh;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: var(--transition);
+}
+
+.menu-wrap .fullScreenMenu > div > div {
+  text-align: left;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.fullScreenMenu ul {
+  position: relative;
+}
+
+.fullScreenMenu ul li {
+  position: absolute;
+}
+
+.fullScreenMenu ul li:nth-of-type(2) {
+  top: 10vh;
+  right: 18vw;
+}
+
+.fullScreenMenu ul li:nth-of-type(3) {
+  top: -40vh;
+  right: 19vw;
+  line-height: 0.8;
+}
+
+.fullScreenMenu ul li:nth-of-type(4) {
+  top: -10vh;
+  right: 10vw;
+  line-height: 0.6;
+}
+
+.fullScreenMenu ul li:nth-of-type(5) {
+  top: -22vh;
+  right: -25vw;
+  line-height: 0.6;
+}
+
+.fullScreenMenu ul li:nth-of-type(6) {
+  top: 25vh;
+  right: -40vw;
+  line-height: 0.6;
+}
+
+.fullScreenMenu ul li:nth-of-type(7) {
+  top: 30vh;
+  right: 20vw;
+}
+
+.fullScreenMenu ul li img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.fullScreenMenu ul li a {
+  color: var(--secondary);
+  font-family: basquiat;
+  text-decoration: none;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
 #container {
   height: 100%;
   width: calc(100% - 4rem);
@@ -516,7 +686,7 @@ aside p:hover {
 .lifePainting:hover,
 .riseTxtImg img:hover,
 .risePainting img:hover {
-  z-index: 99;
+  z-index: 77;
   transform: scale(1.1);
 }
 
@@ -1238,6 +1408,14 @@ footer a {
 }
 
 @media only screen and (max-width: 768px) {
+  aside {
+    display: none;
+  }
+
+  #container {
+    width: 100%;
+  }
+
   .lifeTxt {
     top: 12rem;
     width: 65% !important;
