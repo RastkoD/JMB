@@ -6,6 +6,6 @@
 
 ## 3 Advanced
 
-## This repo contains fifth Intermediate project
+## This repo contains second Advanced project
 
 ### :rocket: [Basquiat](https://jmbasquiat.netlify.app)
