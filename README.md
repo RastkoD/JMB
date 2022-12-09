@@ -8,4 +8,4 @@
 
 ## This repo contains fifth Intermediate project
 
-### :rocket: [Basquiat](https://basquiat.netlify.app)
+### :rocket: [Basquiat](https://jmbasquiat.netlify.app)
