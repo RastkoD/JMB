@@ -1413,7 +1413,7 @@ footer a {
 
   .lifeTxt {
     top: 40% !important;
-    width: 100% !important;
+    width: 90% !important;
     height: max-content !important;
     z-index: 66;
     justify-content: flex-start;
