@@ -201,7 +201,7 @@ aside p:hover {
 }
 
 .landingText div h2 {
-  font-size: clamp(4rem, 9vw, 14rem);
+  font-size: clamp(4rem, 9vw, 12rem);
   line-height: 0.1;
 }
 
@@ -220,7 +220,6 @@ aside p:hover {
 .landingText div:nth-of-type(6) h2 {
   font-family: basquiat;
   font-weight: 800;
-  font-size: clamp(4rem, 14vw, 20rem);
 }
 
 .landingText div:nth-of-type(1) h2,
@@ -1238,6 +1237,10 @@ footer a {
 }
 
 @media only screen and (max-width: 768px) {
+  .landingText {
+    height: 20%;
+  }
+
   aside {
     bottom: 0;
     border-left: none;
@@ -1413,7 +1416,7 @@ footer a {
 
   .lifeTxt {
     top: 40% !important;
-    width: 90% !important;
+    width: 100% !important;
     height: max-content !important;
     z-index: 66;
     justify-content: flex-start;
@@ -1544,11 +1547,6 @@ footer a {
   .obThreeH {
     margin-top: 1.5rem;
   }
-  
-  .galleryImgs div:nth-of-type(5),
-  .galleryImgs div:nth-of-type(6) {
-    margin-top: 0;
-  }
 
   footer .links div:nth-of-type(3) {
     right: 45%;
@@ -1567,11 +1565,6 @@ footer a {
   footer .links div:nth-of-type(1) {
     bottom: 38rem;
     left: 80%;
-  }
-  
-  footer .links div:nth-of-type(7) {
-    bottom: 7rem;
-
   }
 }
 
